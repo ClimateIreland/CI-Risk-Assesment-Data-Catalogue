@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  ra_data_catalogue:
+    container_name: ra_data_catalogue
+    build: 
+      context: ./
+    ports:
+      - "8090:8090"
+    command: gunicorn -w 1 -b 0.0.0.0:8090 app:server
