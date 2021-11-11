@@ -24,6 +24,7 @@ for sheet in categories:
 df = df.reset_index(drop=True)
 
 app = dash.Dash(__name__,
+                url_base_pathname="/ra_data_catalogue/",
                 meta_tags=[{"name": "viewport",
                 "content": "width=device-width, initial-scale=1"}],
                 external_stylesheets=[dbc.themes.BOOTSTRAP, 'https://pro.fontawesome.com/releases/v5.10.0/css/all.css'],
